@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Category>
+
+<div id="menu">
+    <ul>
+        @foreach (var category in Model)
+        {
+            <li> <a href="@Url.Action("GetByCategoryId", "Product", new { id = category.CategoryID})" class="list-group-item">@category.CategoryName</a></li>
+        }
+    </ul>
+</div>
+
